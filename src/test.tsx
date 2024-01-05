@@ -29,13 +29,8 @@ const Test = () => {
         }));
         setModelOptions (combinedModelInfo);
       })
-      .catch ((error) => console.error (' 获取模型列表时发生错误:', error));
-
-    // 在组件卸载时清理Base64字符串
-    return () => {
-      setSelectedModelImageBase64('');
-    };
-  }, [selectedModelImageBase64]);
+      .catch ((error) => console.error ('failed to get model list', error));
+  }, []);
 
   const handleTestModel = () => {
     // 检查是否选择了模型
@@ -84,8 +79,8 @@ const Test = () => {
 
   return (
     <>
-      <PageHeader title={' 测试 '}>
-        有了模型后可以在这里测试，选择模型，然后得到图像。
+      <PageHeader title={'图像可视化'}>
+        选择模型后可以直观地获得模型有关pred和true的图像。
       </PageHeader>
       <Divider />
       选择模型:

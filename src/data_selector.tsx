@@ -19,13 +19,14 @@ function DataSelector({onSelectFileName}) {
   };
 
   return (
-    <>
+    <div style={{width: "100%"}}>
       <Select
+        style={{width: "100%"}}
         defaultValue={fileName}
         onChange={handleFileNameChange}
         options={fileNames.map((e) => ({ value: e, label: e }))}
       />
-    </>
+    </div>
   );
 }
 

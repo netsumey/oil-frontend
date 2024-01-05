@@ -39,7 +39,7 @@ const menuData = [
   },
   {
     path: '/test',
-    name: '测试',
+    name: '图像可视化',
     icons: 'test'
   }
 ];
