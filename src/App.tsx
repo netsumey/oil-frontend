@@ -7,6 +7,7 @@ import Data from "./data";
 import DataDisplay from "./data_display";
 import Model from "./model";
 import DataHandler from "./data_handler";
+import Test from "./test";
 
 const menuData = [
   {
@@ -56,6 +57,7 @@ function App() {
           <Route path={"/data/display"} Component={DataDisplay} />
           <Route path={"/model"} Component={Model}/>
           <Route path={"/data/handler"} Component={DataHandler} />
+          <Route path={"/test"} Component={Test} />
         </Routes>
       </ProLayout>
     </Router>
